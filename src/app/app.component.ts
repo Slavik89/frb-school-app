@@ -16,7 +16,7 @@ export class AppComponent {
   ngOnInit() {
     this.crudServise.getAllCourses().subscribe(data => {
       this.courseName = data.map(data => data.payload.doc.data()['courseName']);
-      console.log(this.courseName);
+      // console.log(this.courseName);
     });
   }
 }

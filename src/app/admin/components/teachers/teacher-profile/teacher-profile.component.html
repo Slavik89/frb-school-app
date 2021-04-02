@@ -1,0 +1,20 @@
+<form #f="ngForm">
+  <mat-form-field floatLabel="always" appearance="fill" color="accent">
+    <mat-label for="firstName">First name</mat-label>
+    <input matInput required id="firstName"         
+      name="firstName" ngModel>
+    <!-- <mat-hint align="end">Min 5 characters</mat-hint> -->
+  </mat-form-field>
+    <br>
+  <mat-form-field floatLabel="always" appearance="fill" color="accent">
+  <mat-label for="lastName">Last name</mat-label>  
+    <input matInput required 
+      type="text" id="lastName"        
+      name="lastName" ngModel>
+  </mat-form-field>
+    <br>
+  <button mat-raised-button color="primary" (click)="postTeacher(f.value)">Add teacher</button>
+  <button mat-raised-button color="warn" (click)="closeWindow()">Cancel</button>
+  
+</form>
+
